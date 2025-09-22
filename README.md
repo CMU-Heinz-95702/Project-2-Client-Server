@@ -8,9 +8,9 @@
 
 #### Five Tasks
 
-:checkered_flag: Using Gradescope, submit each of the five IntelliJ projects below (Task 0 through 4) to Gradescope.
+:checkered_flag: Submit each of the five assignments below (Task 0 through 4) to Gradescope.
 
-Go to Gradescope, select the correct course and assignment, and upload your .java files only. Before submitting, confirm that your files appear correctly in the upload window. Do not include any extra files, folders, or zip archives ; only the required Java source files should be submitted.
+Within Gradescope, select the correct course and assignment and upload your .java files only. You will also submit one PDF file. Before submitting, confirm that your files appear correctly in the upload window. Do not include any extra files, folders, or zip archives ; only the required Java source files and one PDF file should be submitted.
 
 ### Learning Objectives:
 
