@@ -307,7 +307,7 @@ java AddingClientUDP
 - Confirm your file appears correctly and submit.
 
 
-## Task 3 Maintains Server State using UDP.
+## Task 3 Maintains Server State using UDP
 
 0. Name the client "RemoteVariableClientUDP.java". Name the server "RemoteVariableServerUDP.java".
 
