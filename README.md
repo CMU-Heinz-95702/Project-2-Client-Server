@@ -418,7 +418,7 @@ Ensure your files are named **exactly** RemoteVariableServerUDP.java and RemoteV
 Do not include any additional files or directories.
 
 
-## Task 4 Distributes a Neural Network into a Client Server application.
+## Task 4 Distributes a Neural Network into a Client Server application
 
 0. Note: We are NOT studying neural networks in this class. You do not need to understand the mathematical details of how this neural network works. Some of you may want to learn the details and those matters are covered in the blog post mentioned in the program. However, for our purposes, we are treating the neural network as a black box. You only need to read over the code and see how to make calls on the neural network.
 
