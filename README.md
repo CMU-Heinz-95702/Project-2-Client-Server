@@ -2,19 +2,15 @@
 
 ## Project 2 Client-Server Computing
 
-### Assigned: Monday, February 10, 2025
+### Assigned: Tuesday, September 23, 2025
 
-### Due: Monday, February 24, 2025, 2:00 PM
+### Due: Tuesday, October 7, 2025, Midnight
 
 #### Five Tasks
 
-:checkered_flag: Submit to Canvas a ***single PDF file*** named Your_Last_Name_First_Name_Project2.pdf along with a single zip file containing each of the five IntelliJ projects below (Task 0 through 4).
+:checkered_flag: Using Gradescope, submit each of the five IntelliJ projects below (Task 0 through 4) to Gradescope.
 
-The single PDF will contain your responses to the questions marked with a checkered flag. It is important that you ***clearly label*** each answer with the labels provided below. It is also important to ***be prepared*** to demonstrate your working code if we need to verify your submission. Be sure to provide your name and email address at the top of the PDF submission.
-
-The five IntelliJ projects will be submitted as five zip files, each one will be the zip of your WHOLE IntelliJ project for tasks 0, 1, 2, 3, and 4. Each IntelliJ project, except Task 1, will contain one client and one server. Task 1 will contain one client, one server, and one malicious player in the middle. For each project, zip the whole project, you need to use "File->Export Project->To Zip" in IntelliJ.
-
-When all of your work is complete, zip the one PDF and the five project zip files into one big zip file for submission. Name this final file your_andrew_id.zip.
+Go to Gradescope, select the correct course and assignment, and upload your .java files only. Before submitting, confirm that your files appear correctly in the upload window. Do not include any extra files, folders, or zip archives ; only the required Java source files should be submitted.
 
 ### Learning Objectives:
 
@@ -28,11 +24,11 @@ Our **third objective** is for you to understand the abstraction provided by Rem
 
 Our **fourth objective** is the learn how to distribute a stand alone application. We use a simple neural network as our application. Our intent is not to study neural networks in a class on distributed systems. But some of you might decide to dig further into neural networks and use this application as a starting point.
 
-Optionally, you may use a large language model (based on neural networks), such as ChatGPT or Copilot, to create some of your code. Task 0, Task 1, and Task 4 must be done without the help of a large language model. There will be exam questions that ask specifically about the code in these three tasks. You are allowed to use AI tools for the other two tasks (Task 2 and 3). In either case, whether you use an LLM or not, you are responsible for understanding the code that you submit. There may be exam questions that test your understanding of any of these tasks. 
+Optionally, you may use a large language model (based on neural networks), such as ChatGPT or Copilot, to create some of your code. Task 0, Task 1, and Task 4 must be done without the help of a large language model. There will be exam questions that ask specifically about the code in these three tasks. You are allowed to use AI tools for the other two tasks (Task 2 and 3). In either case, whether you use an LLM or not, you are responsible for understanding the code that you submit. There may be exam questions that test your understanding of any of these tasks.
 
 ### Submission notes:
 
-When you are asked to submit Java code (on the single pdf) it should be documented. Points will be deducted if code is not well documented. Each significant block of code will contain a comment describing what the block of code is being used for. See Canvas/Home/Documentation for an example of good and bad documentation.
+When you are asked to submit Java code, it should be documented. Points will be deducted if code is not well documented. Each significant block of code will contain a comment describing what the block of code is being used for. See Canvas/Home/Documentation for an example of good and bad documentation.
 
 ### Rubric
 See the General Course Rubric (on Canvas). We will use a specific, unpublished rubric for this assignment but the general rubric provides rough guidance on how this assignment will be evaluated.
@@ -53,7 +49,7 @@ In general, if these requirements do not explicitly ask for a certain feature, t
 
 If you use any code that is not yours (including code from a large language model), you are required to clearly cite the source - include a full URL in a comment and place it just above the code that is copied. If you use a large language model to generate code, be sure to say so. Be careful to cite your sources. If you submit code that you did not create on your own and you fail to include proper citations then that will be reported as an academic violation.
 
-## Task 0 introduces UDP. Name the IntelliJ project "Project2Task0".
+## Task 0 introduces UDP
 
 In Task 0, you will make several modifications to EchoServerUDP.java and EchoClientUDP.java. Note that
 these two programs are standard Java and we do not need to construct a web application in IntelliJ. Both of these programs will be placed in the same IntelliJ project.
@@ -127,7 +123,7 @@ public class EchoClientUDP{
 1. Change the client&#39;s &quot;arg[0]&quot; to a hardcoded &quot;localhost&quot;.
 2. Document the client and the server. Describe what each line of code does.
 3. Add a line at the top of the client so that it announces, by printing a message on the console, &quot;The UDP client is running.&quot; at start up.
-4. After the announcement that the client is running, have the client prompt the user for the server side port number. It will then use that port number to contact the server. For now, enter 6789.
+4. After the announcement that the client is running, have the client prompt the user for the server side port number. It will then use that port number to contact the server. For now, enter 6789. Recall from lecture that there is also a port number that is selected by the operating system.
 5. Add a line at the top of the server so that it announces &quot;The UDP server is running.&quot; at start up.
 6. After the announcement that the server is running, have the server prompt the user for the port number that the server is supposed to listen on. Enter 6789 when prompted.
 7. On the server, examine the length of the requestString and note that it is too large. Make modifications to the server code so that the request data is copied to an array with the correct number of bytes. Use this array of bytes to build a requestString of the correct size. Without these modifications, incorrect data may be displayed on the server. Upon each visit, your server will display the request arriving from the client.
@@ -136,16 +132,37 @@ public class EchoClientUDP{
 10. Add a line in the client so that it announces when it is quitting. It will write "UDP Client side quitting" to the client side console.
 11. Add a line in the server so that it makes an announcement when it is quitting. The server only quits when it is told to do so by the client (and has just responded to the client with the &quot;halt!&quot; message). It will write "UDP Server side quitting" to the server side console.
 
-:checkered_flag:**On your single pdf, make a copy of your client and label it clearly as "Project2Task0Client".**
+## Compile & Test Locally
 
-:checkered_flag:**On your single pdf, make a copy of your server and label it clearly as "Project2Task0Server".**
+You must test your programs locally by running the following commands in your terminal:
 
-:checkered_flag:**Make a screenshot of your client console screen. It will include five lines of data sent by the client to the server and the client's response to a request by the user to &quot;halt!&quot;. On your single pdf, label this screenshot as "Project2Task0ClientConsole".**
+```bash
+# Compile the source files
+javac EchoServerUDP.java EchoClientUDP.java
 
-:checkered_flag:**Make a screenshot of your server console screen. It will include five lines of data sent by the client and the server's response to the &quot;halt!&quot; request by the client. On your single pdf, label this screenshot as "Project2Task0ServerConsole".**
+# In one terminal, start the server:
+java EchoServerUDP
+
+# In another terminal, run the client:
+java EchoClientUDP
+```
+Verify that short messages (e.g. Hello) echo correctly.
+
+Verify that longer messages echo exactly (no extra padding).
+
+Verify that typing halt! shuts down both client and server with the required quitting messages.
+
+## Prepare for Submission
+- Ensure your files are named exactly EchoServerUDP.java and EchoClientUDP.java.
+- Do not include any additional files unless instructed.
+- Go to Gradescope.
+- Select the correct course and assignment.
+- Upload your java files.
+- Confirm your file appears correctly and submit.
+- Do not include any other files or folders
 
 
-## Task 1 illustrates a malicious player in the middle attack on UDP. Name the IntelliJ Project "Project2Task1".
+## Task 1 illustrates a malicious player in the middle attack on UDP.
 
 In Task 1, you will experiment with a malicious player in the middle attack. This malicious player is interested in more than simply eavesdropping on the conversation between the client and the server. It is an active malicious player. You might want to get started by working on a passive malicious player - one that only eavesdrops and passes messages along to the server and then back to the client.
 
@@ -159,19 +176,60 @@ Second, run EavesdropperUDP.java. EavesdropperUDP will state that it is running 
 
 Third, when you run EchoClientUDP.java, provide it with either the correct port (of the real server) or the port that Eavesdropper is listening on. That is, it will work with either 6789 or 6798.  
 
-Eavesdropper is an active attacker. If the client sends a string containing the word &quot;like&quot; the eavesdropper will replace the word &quot;like&quot; with the word &quot;dislike&quot;. The eavesdroppr will not bother with the string &quot;like&quot; if it is included as a substring of another word, such as &quot;dislike&quot;.
+Eavesdropper is an active attacker. If the client sends a string containing the word &quot;like&quot; the eavesdropper will replace the word &quot;like&quot; with the word &quot;dislike&quot;. The eavesdroppr will not bother with the string &quot;like&quot; if it is included as a substring of another word, such as &quot;dislike&quot;. Be sure to test this before submission.
 
 The eavesdropper need only replace the first occurrence of the word &quot;like&quot; with the word &quot;dislike&quot; and it will leave alone the response from the server. In other words, when it receives &quot;like&quot; from the client it sends &quot;dislike&quot; to the server and then leaves the server's response alone. The client will receive &quot;dislike&quot;.
 
-If the client sends the message &quot;halt!&quot; then the server will respond, as usual, and then halt execution. The client will halt when it hears from the server. Our malicious player runs forever. And it displays everything it sees to its console.
+If the client sends the message &quot;halt!&quot; then the server will respond, as usual, and then the server will halt execution. The client will halt when it hears from the server. Our malicious player runs forever. And it displays everything it sees to its console.
 
-:checkered_flag:**On your single pdf, make a copy of your documented EavesdropperUDP.java program.
+# UDP Malicious Player Programs
 
-:checkered_flag:**Make a screenshot showing your client, server, and eavesdropper consoles. The shot will show a few lines of data sent by the client and the server's response to the &quot;halt!&quot; request by the client. It will also show the eavesdropper console - showing the entire interaction between the client and the server. On your single pdf, label this screenshot as "Project2Task1ThreeConsoles". Be sure to show the client using port 6789 (correct server) and 6798 (malicious player). The idea is to provide screenshots that demonstrate that the client works against both servers. You also need to show the word &quot;like&quot; being replaced with the word &quot;dislike&quot;**
+### 1. Write Your Programs
+Create **exactly three files** in your project root:  
+- `EchoServerUDP.java`  
+- `EchoClientUDP.java`  
+- `EavesdropperUDP.java`  
+
+📌 Be sure to document your code with comments explaining its purpose.  
+
+---
+
+### 2. You must test your programs locally
+
+Compile all three components:  
+
+```bash
+javac EchoServerUDP.java EchoClientUDP.java EavesdropperUDP.java
+
+Run each component in separate terminals:
+# In terminal #1:
+java EchoServerUDP
+
+# In terminal #2:
+java EavesdropperUDP
+
+# In terminal #3:
+java EchoClientUDP
+```
+
+- Verify that messages echo correctly through to the server. Test for client to server and client to malicious player. There should be no padding.
+
+- Verify that typing halt! shuts down both client and server (but not the eavesdropper) with the correct quitting messages.
+
+- Verify that the eavesdropper displays all traffic and only modifies the first occurrence of like.
+
+## Prepare for Submission
+- Ensure your files are named exactly EchoServerUDP.java, EchoClientUDP.java, and EavesdropperUDP.java.
+- Do not include any additional files unless instructed.
+- Go to Gradescope.
+- Select the correct course and assignment.
+- Upload your java files.
+- Confirm your file appears correctly and submit.
+- Do not include any other files or folders
 
 In the remaining tasks (Tasks 2 through 4), we do not provide the client with the ability to stop the server. We are doing that only in Tasks 0 and 1. In the remaining Tasks, the server is left running - forever. In the remaining tasks, we are not using an eavesdropper.
 
-## Task 2 illustrates a proxy design using UDP. Name the IntelliJ Project "Project2Task2".
+## Task 2 illustrates a proxy design using UDP
 
 Make the following modifications to "EchoServerUDP.java" and "EchoClientUDP.java":
 
@@ -185,7 +243,7 @@ public static int add(int i)
 ```
 3. Separate concerns on the server. Your code that listens for a socket connection should be separate from the code that performs the add operation. In other words, the actual arithmetic should be done in a separate method. The UDP socket communication code will make calls to this method.
 
-4. Write a client and server that has the following client side interaction with a user:
+4. Write a client and server that has the following client side interaction with a user. Note the period (full stop) after "Client side quitting.". You must follow the exact wording as shown in the following interaction:
 
 ```
 The client is running.
@@ -202,8 +260,10 @@ The server returned 4.
 The server returned 10.
 halt!
 Client side quitting.
+```
 
 If the client is restarted (note that the server is still running) we have:
+```
 The client is running.
 Please enter server port:
 6789
@@ -232,24 +292,54 @@ Note: UDP messages are made up of byte arrays. You will need to take an int and 
 
 Another approach would be to only transmit byte arrays containing String data. You may use either approach.
 
-:checkered_flag:**On your single pdf, make a copy of your client and label it clearly as "Project2Task2Client".**
+# Task 2 Instructions
 
-:checkered_flag:**On your single pdf, make a copy of your server and label it clearly as "Project2Task2Server".**
+## 1. Write Your Program
+Create exactly two files in your project root:  
+- `AddingServerUDP.java`  
+- `AddingClientUDP.java`  
 
-:checkered_flag:**Take a screenshot of your client console screen. It will include five integer inputs (1,2,-3,4, and 5) and show the sums as they arrive back from the server. It will also show the client being stopped, and re-run a second time with the inputs (6,7,-8,9, and 10) and the client's response to a request by the user to &quot;halt!&quot;. On your single pdf, label this screenshot as "Project2Task2ClientConsole".**
+Document every method and key code block with clear comments.  
 
-:checkered_flag:**Take a screenshot of your server console screen. It will include the 10 lines of data being sent by the client and the server's responses. On your single pdf, label this screenshot as "Project2Task2ServerConsole".**
+---
+
+## 2. Test Your Program Locally
+Compile and run each component:  
+
+```bash
+javac AddingServerUDP.java AddingClientUDP.java
+# Terminal 1:
+java AddingServerUDP
+# (enter port, e.g. 6789)
+# Terminal 2:
+java AddingClientUDP
+```
+- Send integers (e.g. 3, 2, -1) and verify the running sum increases correctly.
+
+- Verify halt! causes the client to quit and the server to remain running.
+
+- Ensure your files are named exactly AddingServerUDP.java and AddingClientUDP.java.
+
+- Do not include any additional files or directories.
+- Go to Gradescope.
+- Select the correct course and assignment.
+- Upload your java files.
+- Confirm your file appears correctly and submit.
 
 
-## Task 3 maintains server state using UDP. Name the IntelliJ project "Project2Task3"
+## Task 3 maintains server state using UDP.
 
 0. Name the client "RemoteVariableClientUDP.java". Name the server "RemoteVariableServerUDP.java".
 
 1. Modify your work in Task 2 so that the client may request either an &quot;add&quot; or &quot;subtract&quot; or &quot;get&quot; operation be performed by the server. The &quot;add&quot; and &quot;subtract&quot; operations are not idempotent but the &quot;get&quot; operation is idempotent. In addition, each request will pass along an integer ID. This ID is used to uniquely identify the user. Thus, the client will form a packet with the following values: ID, operation (add or subtract or get), and value (if the operation is other than get). The server will carry out the correct computation (add or subtract or get) using the sum associated with the ID found in each request. The client will be menu driven and will repeatedly ask the user for the user ID, operation, and value (if not a get request). When the operation is &quot;get&quot;, the value held on the server is simply returned. When the operation is &quot;add&quot; or &quot;subtract&quot; the server performs the operation and returns the sum. During execution, the client will display each returned value from the server to the user. If the server receives an ID that it has not seen before, that ID will initially be associated with a sum of 0. ID's will range between 0 and 999.
 
+The messages sent by the client must be space delimited such as:
+123 get
+123 add 5
+
 2. On the server, you will need to map each ID to the value of a sum. Different ID&#39;s may be presented and each will have its own sum. The server is given no prior knowledge of what ID&#39;s will be transmitted to it by the client. You may only assume that ID&#39;s are positive integers. You are required to store each ID and its associated sum, in a Java TreeMap.
 
-The client side menu will provide an option to exit the client. Exiting the client has no impact on the server. Here is an example client side interaction:
+The client side menu will provide an option to exit the client. Exiting the client has no impact on the server. Here is an example client side interaction. Be sure to use the exact same wording.
 
 ```
 The client is running.
@@ -314,21 +404,41 @@ The result is 13.
 3. Get your sum.
 4. Exit client.
 4
-Client side quitting. The remote variable server is still running.
-
+Client side quitting.
 ```
+
+The remote variable server is still running.
+
 
 3. As you did in Task 2, use a proxy design to encapsulate the communication code.
 
-:checkered_flag:**On your single pdf, make a copy of your client and label it clearly as "Project2Task3Client".**
+Create two files in your project root exactly:
+RemoteVariableServerUDP.java
+RemoteVariableClientUDP.java
+Use TreeMap<Integer,Integer> on the server to store sums.
+Encapsulate all UDP communication in proxy methods on the client.
+Document key classes and methods with comments.
 
-:checkered_flag:**On your single pdf, make a copy of your server and label it clearly as "Project2Task3Server".**
+### Test Your Program Locally
+```
+# Compile the code
+javac RemoteVariableServerUDP.java RemoteVariableClientUDP.java
 
-:checkered_flag:**Take a screenshot of your client console screen. Show three different clients interacting with the server using three distinct ID&#39;s. Each client will perform one addition, one subtraction, and finally a get request. It will also show the client being stopped, and re-run a second time with get requests from each of the three clients.  On your single pdf, label this screenshot as "Project2Task3ClientConsole".**
+# Terminal 1:
+java RemoteVariableServerUDP
+# (enter port, e.g. 6789)
+# Terminal 2:
+java RemoteVariableClientUDP
+```
+Walk through menu options, verify sums are correctly maintained per ID.
 
-:checkered_flag:**Take a screenshot of your server console. It will show each visitor's ID, the operation requested, and the value of the variable being returned. On your single pdf, label this screenshot as "Project2Task3ServerConsole".**
+Ensure get does not change the sum, and that exiting the client does not stop the server.
 
-## Task 4 Distributes a neural network into a client server application. Name the IntelliJ project "Project2Task4"
+Ensure your files are named **exactly** RemoteVariableServerUDP.java and RemoteVariableClientUDP.java.
+Do not include any additional files or directories.
+
+
+## Task 4 Distributes a neural network into a client server application.
 
 0. Note: We are NOT studying neural networks in this class. You do not need to understand the mathematical details of how this neural network works. Some of you may want to learn the details and those matters are covered in the blog post mentioned in the program. However, for our purposes, we are treating the neural network as a black box. You only need to read over the code and see how to make calls on the neural network.
 
@@ -917,6 +1027,8 @@ Here are the four corresponding response messages:
  9. As you did in Task 2, use a proxy design to encapsulate the communication code.
 
 
+ For Task4, we are not auto grading. Please submit a single PDF file named
+ Project2Task4_YOUR_USER_ID.
 
  :checkered_flag:**On your single pdf, make a copy of your client and label it clearly as "Project2Task4Client".**
 
@@ -925,15 +1037,6 @@ Here are the four corresponding response messages:
  :checkered_flag:**Take a screenshot (or copy and paste) your client console screen. The user should show the neural network being trained to learn the logical "OR", "XOR", and "AND" operations.  On your single pdf, label this screenshot as "Project2Task4ClientConsole".**
 
  :checkered_flag:**Take a screenshot (or copy and paste) of your server console. It will show each JSON string being sent by the client to the server and will show each JSON string being sent back to the client. On your single pdf, label this screenshot as "Project2Task4ServerConsole".**
-
-
-## Submission Summary:
-
-:checkered_flag: Submit to Canvas the single PDF file named Your_Last_Name_First_Name_Project2.pdf. It is important that you ***clearly label*** each submission. Be sure to provide your name and email address at the top of the .pdf file.
-
-Finally, create five zip files, each one of which is the zip of your WHOLE project for tasks 0, 1, 2, 3, and 4. Each project will contain one client and one server (except for Task 1). For each project, zip the whole project, you need to use "File->Export Project->To Zip" in IntelliJ.
-
-Zip the one PDF and the five project zip files into one big zip file for submission. Name this file your_andrew_id.zip.
 
 ## Appendix working with gson in IntelliJ.
 
@@ -1050,10 +1153,10 @@ within the object and then use Gson to display the Java object in JSON format.
 Here is an example execution:
 ```
 Enter a transaction in Json format. Include from, to, and amount.       
-{"from":"Mike","to":"Marty","amount":123.50}      This line is entered by the user.
-From: Mike                                        Display values within the object
+{"from":"Mike","to":"Marty","amount":123.50} This line is entered by the user.
+From: Mike                               Display values within the object
 To: Marty
 Amount: 123.5
-{"from":"Mike","to":"Marty","amount":123.5}       Use Gson to generate the JSON
+{"from":"Mike","to":"Marty","amount":123.5}   Use Gson to generate the JSON
 
 ```
