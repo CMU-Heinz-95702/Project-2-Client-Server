@@ -132,7 +132,7 @@ public class EchoClientUDP{
 10. Add a line in the client so that it announces when it is quitting. It will write "UDP Client side quitting" to the client side console.
 11. Add a line in the server so that it makes an announcement when it is quitting. The server only quits when it is told to do so by the client (and has just responded to the client with the &quot;halt!&quot; message). It will write "UDP Server side quitting" to the server side console.
 
-## Compile & Test Locally
+## Task 0 Compile & Test Locally
 
 You must test your programs locally by running the following commands in your terminal:
 
@@ -152,7 +152,7 @@ Verify that longer messages echo exactly (no extra padding).
 
 Verify that typing halt! shuts down both client and server with the required quitting messages.
 
-## Prepare for Submission
+## Task 0 Prepare for Submission
 - Ensure your files are named exactly EchoServerUDP.java and EchoClientUDP.java.
 - Do not include any additional files unless instructed.
 - Go to Gradescope.
@@ -182,7 +182,7 @@ The eavesdropper need only replace the first occurrence of the word &quot;like&q
 
 If the client sends the message &quot;halt!&quot; then the server will respond, as usual, and then the server will halt execution. The client will halt when it hears from the server. Our malicious player runs forever. And it displays everything it sees to its console.
 
-# UDP Malicious Player Programs
+# Task 1 UDP Malicious Player Programs
 
 ### 1. Write Your Programs
 Create **exactly three files** in your project root:  
@@ -218,7 +218,7 @@ java EchoClientUDP
 
 - Verify that the eavesdropper displays all traffic and only modifies the first occurrence of like.
 
-## Prepare for Submission
+## Task 1 Prepare for Submission
 - Ensure your files are named exactly EchoServerUDP.java, EchoClientUDP.java, and EavesdropperUDP.java.
 - Do not include any additional files unless instructed.
 - Go to Gradescope.
