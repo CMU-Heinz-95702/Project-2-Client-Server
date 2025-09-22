@@ -10,7 +10,7 @@
 
 :checkered_flag: Submit each of the five assignments below (Task 0 through 4) to Gradescope.
 
-Within Gradescope, select the correct course and assignment and upload your .java files only. You will also submit one PDF file. Before submitting, confirm that your files appear correctly in the upload window. Do not include any extra files, folders, or zip archives ; only the required Java source files and one PDF file should be submitted.
+Within Gradescope, select the correct course and assignment and upload your .java files. You will also submit one PDF file. Before submitting, confirm that your files appear correctly in the upload window. Do not include any extra files, folders, or zip archives. Only the required Java source files and one PDF file should be submitted.
 
 ### Learning Objectives:
 
