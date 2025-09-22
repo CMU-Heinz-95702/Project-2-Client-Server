@@ -49,7 +49,7 @@ In general, if these requirements do not explicitly ask for a certain feature, t
 
 If you use any code that is not yours (including code from a large language model), you are required to clearly cite the source - include a full URL in a comment and place it just above the code that is copied. If you use a large language model to generate code, be sure to say so. Be careful to cite your sources. If you submit code that you did not create on your own and you fail to include proper citations then that will be reported as an academic violation.
 
-## Task 0 introduces UDP
+## Task 0 Introduces UDP
 
 In Task 0, you will make several modifications to EchoServerUDP.java and EchoClientUDP.java. Note that
 these two programs are standard Java and we do not need to construct a web application in IntelliJ. Both of these programs will be placed in the same IntelliJ project.
@@ -162,11 +162,13 @@ Verify that typing halt! shuts down both client and server with the required qui
 - Do not include any other files or folders
 
 
-## Task 1 illustrates a malicious player in the middle attack on UDP.
+## Task 1 Illustrates a Malicious Player in the Middle Attack on UDP.
+
+
 
 In Task 1, you will experiment with a malicious player in the middle attack. This malicious player is interested in more than simply eavesdropping on the conversation between the client and the server. It is an active malicious player. You might want to get started by working on a passive malicious player - one that only eavesdrops and passes messages along to the server and then back to the client.
 
-We will have three UDP programs in one project.
+We will have three documented UDP programs in one project. We will have **exactly three Java files** in your project root. These will be named `EchoServerUDP.java` , `EchoClientUDP.java`, and  `EavesdropperUDP.java`  
 
 Name your malicious player EavesdropperUDP.java. You will need to design and write EavesdropperUDP.java as it is described below.
 
@@ -182,19 +184,7 @@ The eavesdropper need only replace the first occurrence of the word &quot;like&q
 
 If the client sends the message &quot;halt!&quot; then the server will respond, as usual, and then the server will halt execution. The client will halt when it hears from the server. Our malicious player runs forever. And it displays everything it sees to its console.
 
-# Task 1 UDP Malicious Player Programs
-
-### 1. Write Your Programs
-Create **exactly three files** in your project root:  
-- `EchoServerUDP.java`  
-- `EchoClientUDP.java`  
-- `EavesdropperUDP.java`  
-
-📌 Be sure to document your code with comments explaining its purpose.  
-
----
-
-### 2. You must test your programs locally
+## Task 1 Compile & Test Locally
 
 Compile all three components:  
 
@@ -229,11 +219,11 @@ java EchoClientUDP
 
 In the remaining tasks (Tasks 2 through 4), we do not provide the client with the ability to stop the server. We are doing that only in Tasks 0 and 1. In the remaining Tasks, the server is left running - forever. In the remaining tasks, we are not using an eavesdropper.
 
-## Task 2 illustrates a proxy design using UDP
+## Task 2 Illustrates a Proxy Design using UDP
 
 Make the following modifications to "EchoServerUDP.java" and "EchoClientUDP.java":
 
-0. Name the client "AddingClientUDP.java". Name the server "AddingServerUDP.java".
+0. Name the client "AddingClientUDP.java". Name the server "AddingServerUDP.java". In your project root you will have two documented Java programs named `AddingClientUDP.java` and  `AddingServerUDP.java`.
 1. The server will hold an integer value sum, initialized to 0, and will receive requests from the client - each of which includes an integer value (positive or negative or 0) to be added to the sum. Upon each request, the server will return the new sum as a response to the client. On the server side console, upon each visit by the client, the client's request and the new sum will be displayed.
 2. Separate concerns on the client. On the client, all of the communication code will be placed in a method named &quot;add&quot;. In other words, the main method of the client will have no code related to client server communications. Instead, the main routine will simply call a local method named &quot;add&quot;. The client side &quot;add&quot; method will not perform any addition, instead, it will request that the server perform the addition. The &quot;add&quot; method will encapsulate or hide all communication with the server. It is within the &quot;add&quot; method where we actually work with sockets. This is a variation of what is called a &quot;proxy design&quot;. The &quot;add&quot; method is serving as a proxy for the server. When your code makes a call on the local "add" method, you are actually making a remote procedure call (RPC). The client side &quot;add&quot; method has the following signature:
 
@@ -292,18 +282,8 @@ Note: UDP messages are made up of byte arrays. You will need to take an int and 
 
 Another approach would be to only transmit byte arrays containing String data. You may use either approach.
 
-# Task 2 Instructions
+## Task 2 Compile & Test Locally
 
-## 1. Write Your Program
-Create exactly two files in your project root:  
-- `AddingServerUDP.java`  
-- `AddingClientUDP.java`  
-
-Document every method and key code block with clear comments.  
-
----
-
-## 2. Test Your Program Locally
 Compile and run each component:  
 
 ```bash
@@ -327,7 +307,7 @@ java AddingClientUDP
 - Confirm your file appears correctly and submit.
 
 
-## Task 3 maintains server state using UDP.
+## Task 3 Maintains Server State using UDP.
 
 0. Name the client "RemoteVariableClientUDP.java". Name the server "RemoteVariableServerUDP.java".
 
@@ -419,7 +399,7 @@ Use TreeMap<Integer,Integer> on the server to store sums.
 Encapsulate all UDP communication in proxy methods on the client.
 Document key classes and methods with comments.
 
-### Test Your Program Locally
+## Task 3 Compile & Test Locally
 ```
 # Compile the code
 javac RemoteVariableServerUDP.java RemoteVariableClientUDP.java
@@ -438,7 +418,7 @@ Ensure your files are named **exactly** RemoteVariableServerUDP.java and RemoteV
 Do not include any additional files or directories.
 
 
-## Task 4 Distributes a neural network into a client server application.
+## Task 4 Distributes a Neural Network into a Client Server application.
 
 0. Note: We are NOT studying neural networks in this class. You do not need to understand the mathematical details of how this neural network works. Some of you may want to learn the details and those matters are covered in the blog post mentioned in the program. However, for our purposes, we are treating the neural network as a black box. You only need to read over the code and see how to make calls on the neural network.
 
