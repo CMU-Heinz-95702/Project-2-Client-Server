@@ -321,6 +321,8 @@ The messages sent by the client must be space delimited such as:
 
 The client side menu will provide an option to exit the client. Exiting the client has no impact on the server. Here is an example client side interaction. Be sure to use the exact same wording.
 
+In order to pass the Gradescope tests, you need to use only one input stream on the client.
+
 ```
 The client is running.
 Please enter server port:
