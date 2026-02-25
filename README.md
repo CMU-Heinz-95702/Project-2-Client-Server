@@ -49,7 +49,7 @@ In general, if these requirements do not explicitly ask for a certain feature, t
 
 If you use any code that is not yours (including code from a large language model), you are required to clearly cite the source - include a full URL in a comment and place it just above the code that is copied. If you use a large language model to generate code, be sure to say so. Be careful to cite your sources. If you submit code that you did not create on your own and you fail to include proper citations then that will be reported as an academic violation.
 
-## Task 0 Introduces UDP
+## Task 0 Introduces UDP  30 Points
 
 In Task 0, you will make several modifications to EchoServerUDP.java and EchoClientUDP.java. Note that
 these two programs are standard Java and we do not need to construct a web application in IntelliJ. Both of these programs will be placed in the same IntelliJ project.
@@ -162,7 +162,7 @@ Verify that typing halt! shuts down both client and server with the required qui
 - Do not include any other files or folders
 
 
-## Task 1 Illustrates a Malicious Player in the Middle Attack on UDP.
+## Task 1 Illustrates a Malicious Player in the Middle Attack on UDP 15 Points
 
 
 
@@ -219,7 +219,7 @@ java EchoClientUDP
 
 In the remaining tasks (Tasks 2 through 4), we do not provide the client with the ability to stop the server. We are doing that only in Tasks 0 and 1. In the remaining Tasks, the server is left running - forever. In the remaining tasks, we are not using an eavesdropper.
 
-## Task 2 Illustrates a Proxy Design using UDP
+## Task 2 Illustrates a Proxy Design using UDP  15 Points
 
 Make the following modifications to "EchoServerUDP.java" and "EchoClientUDP.java":
 
@@ -307,7 +307,7 @@ java AddingClientUDP
 - Confirm your file appears correctly and submit.
 
 
-## Task 3 Maintains Server State using UDP
+## Task 3 Maintains Server State using UDP  10 Points
 
 0. Name the client "RemoteVariableClientUDP.java". Name the server "RemoteVariableServerUDP.java".
 
@@ -420,7 +420,7 @@ Ensure your files are named **exactly** RemoteVariableServerUDP.java and RemoteV
 Do not include any additional files or directories.
 
 
-## Task 4 Distributes a Neural Network into a Client Server application
+## Task 4 Distributes a Neural Network into a Client Server application 30 Points
 
 0. Note: We are NOT studying neural networks in this class. You do not need to understand the mathematical details of how this neural network works. Some of you may want to learn the details and those matters are covered in the blog post mentioned in the program. However, for our purposes, we are treating the neural network as a black box. You only need to read over the code and see how to make calls on the neural network.
 
@@ -1016,7 +1016,7 @@ Here are the four corresponding response messages:
 
  :checkered_flag:**On your single pdf, make a copy of your server and label it clearly as "Project2Task4Server".**
 
- :checkered_flag:**Take a screenshot (or copy and paste) your client console screen. The user should show the neural network being trained to learn the logical "OR", "XOR", and "AND" operations.  On your single pdf, label this screenshot as "Project2Task4ClientConsole".**
+ :checkered_flag:**Take a screenshot (or copy and paste) your client console screen. Your pdf will show the neural network being trained to learn the logical "OR", "XOR", and "AND" operations. Then, by interacting on the client side, the pdf will included a demonstration that the neural network has learned these boolean operations. On your single pdf, label this screenshot (showing the client side interaction) as "Project2Task4ClientConsole".**
 
  :checkered_flag:**Take a screenshot (or copy and paste) of your server console. It will show each JSON string being sent by the client to the server and will show each JSON string being sent back to the client. On your single pdf, label this screenshot as "Project2Task4ServerConsole".**
 
