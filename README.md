@@ -131,6 +131,7 @@ public class EchoClientUDP{
 9. If the client enters the command &quot;halt!&quot;, both the client and the server will halt execution. When the client program receives &quot;halt!&quot; from the user, it sends &quot;halt!&quot; to the sever and after hearing the &quot;halt!&quot; message from the server, the client exits. When the server receives &quot;halt!&quot; from the client, it will respond to the client with &quot;halt!&quot; and then exit.
 10. Add a line in the client so that it announces when it is quitting. It will write "UDP Client side quitting" to the client side console.
 11. Add a line in the server so that it makes an announcement when it is quitting. The server only quits when it is told to do so by the client (and has just responded to the client with the &quot;halt!&quot; message). It will write "UDP Server side quitting" to the server side console.
+12. Note that we are using a single BufferedReader for user input. In this and the remaining tasks, please use only one BufferedReader for user input. Otherwise, the auto grader will be confused and reject your submissions.
 
 ## Task 0 Compile & Test Locally
 
