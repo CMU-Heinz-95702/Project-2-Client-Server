@@ -175,7 +175,12 @@ Name your malicious player EavesdropperUDP.java. You will need to design and wri
 
 First, run EchoServerUDP.java as it has been modified in Task 0. EchoServerUDP will prompt you for its port. Enter the port 6789 for EchoServerUDP to listen on.
 
-Second, run EavesdropperUDP.java. EavesdropperUDP will state that it is running and will ask you for two ports. One port will be the port that the EavesdropperUDP.java will listen on and the other port will be the port number of the server that Eavesdropper.java is masquerading as. We want Eavesdropper.java to display (on its console) all messages that go through it. We want it to eavesdrop on the wire. It will be masquerading as the server on port 6789. It will listen on port 6798 - hoping a foolish client will make a transposition error.
+Second, run EavesdropperUDP.java. EavesdropperUDP will state that it is running and will ask you for two ports. The first port entered must be the port that the EavesdropperUDP.java will listen on and the second port entered must be the port number of the server that Eavesdropper.java is masquerading as. We want Eavesdropper.java to display (on its console) all messages that go through it. We want it to eavesdrop on the wire. It will be masquerading as the server on port 6789. It will listen on port 6798 - hoping a foolish client will make a transposition error.
+
+Example:
+ 
+Enter eavesdropper listening port: 6798
+Enter real server port: 6789
 
 Third, when you run EchoClientUDP.java, provide it with either the correct port (of the real server) or the port that Eavesdropper is listening on. That is, it will work with either 6789 or 6798.  
 
