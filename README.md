@@ -4,7 +4,7 @@
 
 ### Assigned: Monday, September 21, 2026
 
-### Due: Monday, October 5, 2026, 11:59 PM
+### Due: Tuesday, October 6, 2026, 11:59 PM
 
 #### Five Tasks
 
